@@ -1,41 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
-<title>LiteGUI Demo</title>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	<title>LiteGUI Demo</title>
 	<style type='text/css'></style>
 	<link rel="stylesheet" type="text/css" href="../dist/litegui-es.css">
-	<script type="text/javascript" src="../dist/litegui-es.js"></script>
-</title>
 
-<style>
-	html,body {
-		width: 100%;
-		height: 100%;
-	}
+	<style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+		}
 
-	#sidebar {
-		font-size: 2em;
-		width: 300px;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		right: 0;
-	}
-</style>
+		#sidebar {
+			font-size: 2em;
+			width: 300px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	</style>
 
 </head>
+
 <body>
 
 	<div id="sidebar"></div>
-
-	<script type="text/javascript">
+	<script type="module" type="text/javascript">
+		import LiteGUI from "../dist/litegui-es.js";
+		window.LiteGUI = LiteGUI;
 		//call the init to setup 
 		LiteGUI.init();
-		var sidebar = new LiteGUI.Inspector();	
-		sidebar.addString("Name","now");
-		sidebar.addButton(null,"Send", function(){
+		var sidebar = new LiteGUI.Inspector();
+		sidebar.addString("Name", "now");
+		sidebar.addButton(null, "Send", function () {
 			LiteGUI.alert("foo");
 		});
 		sidebar.appendTo("#sidebar");
@@ -44,4 +46,5 @@
 
 
 </body>
+
 </html>

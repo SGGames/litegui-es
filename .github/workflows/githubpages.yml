@@ -37,6 +37,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - run: npm install --package-lock-only
       - run: npm ci
       - run: npm run build-demo-ghp
       - name: Upload artifact
