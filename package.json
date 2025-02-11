@@ -1,0 +1,35 @@
+{
+  "name": "litegui-es",
+  "description": "LiteGUI in Javascript Javascript ES. Packed with Vite",
+  "version": "1.0.1",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/litegui-es.js",
+      "require": "./dist/litegui-es.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/litegui-es.umd.cjs",
+  "module": "dist/litegui-es.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SGGames/litegui-es.git"
+  },
+  "homepage": "https://github.com/SGGames/litegui-es#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build-demo": "vite build --config vite.demo.config.js",
+    "build-demo-ghp": "vite build --base=/litegui-es/ --config vite.demo.config.js",
+    "publish": "pnpm run build && pnpm publish"
+  },
+  "author": "SGGames",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^6.1.0"
+  }
+}
